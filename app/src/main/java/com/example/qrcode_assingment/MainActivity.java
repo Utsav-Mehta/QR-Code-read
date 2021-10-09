@@ -20,7 +20,11 @@ import com.example.qrcode_assingment.Database.DatabaseHelper;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
+
     private DatabaseHelper databaseHelper;
     private Button scanBtn,prevScans;
     private Dialog dialog;
@@ -156,6 +160,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Retry!", Toast.LENGTH_SHORT).show();
         }
     }
+
+    /**
+     * Add data.
+     *
+     * @param newEntry the new entry
+     */
     public void AddData(String newEntry) {
         boolean insertData = databaseHelper.addData(newEntry);
     }

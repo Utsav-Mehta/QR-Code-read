@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+/**
+ * The type Database helper.
+ */
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
 
@@ -15,6 +18,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL2 = "name";
 
 
+    /**
+     * Instantiates a new Database helper.
+     *
+     * @param context the context
+     */
     public DatabaseHelper(Context context) {
         super(context, TABLE_NAME, null, 1);
     }
@@ -32,6 +40,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /**
+     * Add data boolean.
+     *
+     * @param item the item
+     * @return the boolean
+     */
     public boolean addData(String item) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -51,7 +65,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * Returns all the data from database
-     * @return
+     *
+     * @return cursor
      */
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();

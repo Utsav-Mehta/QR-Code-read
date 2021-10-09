@@ -11,8 +11,14 @@ import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 
+/**
+ * The type Qr information.
+ */
 public class qrInformation extends AppCompatActivity {
     private TextView info;
+    /**
+     * The Information.
+     */
     public String information;
 //    public static final String SHARED_PREFS = "prefs";
 //    public static final String KEY_BUTTON_TEXT = "keyButtonText";

@@ -13,6 +13,9 @@ import com.example.qrcode_assingment.Database.DatabaseHelper;
 
 import java.util.ArrayList;
 
+/**
+ * The type Previous q rs.
+ */
 public class previousQRs extends AppCompatActivity {
 
     private ListView listView;
